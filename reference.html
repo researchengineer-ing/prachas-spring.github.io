@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Lines — Spring 2026</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav>
+  <span class="site-title">Spring 2026</span>
+  <a href="index.html">Home</a>
+  <a href="pages/projects.html">Projects</a>
+  <a href="pages/papers.html">Papers</a>
+  <a href="pages/implementations.html">Implementations</a>
+  <a href="pages/learning.html">Learning</a>
+  <a href="pages/assets.html">Assets</a>
+  <a href="reference.html" class="active">Reference</a>
+</nav>
+
+<div class="container">
+
+  <div class="hero">
+    <h1>Spring 2026 Research Lines</h1>
+    <p class="subtitle">Deep Dive with Parallel Fundamentals &mdash; Karpathy method: go depth-first, build from scratch, foundations are non-negotiable</p>
+  </div>
+
+  <div class="ref-toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#interp">LLM Interpretability &amp; Alignment</a></li>
+      <li><a href="#diffusion">Diffusion &amp; Flows</a></li>
+      <li><a href="#cl">Continual Learning</a></li>
+      <li><a href="#crl">Causal Representation Learning</a></li>
+      <li><a href="#ham">Port-Hamiltonian System Dynamics</a></li>
+      <li><a href="#jepa">JEPAs, Model-Based RL &amp; MPC</a></li>
+      <li><a href="#ssm">State Space Models &amp; Cognitive Modeling</a></li>
+      <li><a href="#qss">Quantitative Social Science / Econometrics</a></li>
+      <li><a href="#cross">Cross-Cutting Dependencies Map</a></li>
+    </ol>
+  </div>
+
+  <!-- ── 1. LLM INTERPRETABILITY ── -->
+  <div class="ref-section" id="interp">
+    <h2>1. LLM Interpretability &amp; Alignment</h2>
+    <p class="goal"><strong>Goal:</strong> Find new ideas and hypotheses at the intersection of interpretability + teleodynamics / representation engineering + SSMs / causality</p>
+
+    <h3>What to Study in Depth</h3>
+    <table>
+      <thead><tr><th>Topic</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Mechanistic interpretability</td><td>Circuits, superposition, sparse autoencoders (SAEs), probing, causal tracing</td></tr>
+        <tr><td>Representation engineering</td><td>Steering vectors, activation patching, concept erasure, linear probes</td></tr>
+        <tr><td>Alignment theory</td><td>RLHF, DPO, constitutional AI, reward hacking, scalable oversight</td></tr>
+        <tr><td>Teleodynamics connection</td><td>Information-theoretic view of internal representations; how do LLMs form "attractors"?</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Foundations to Learn in Parallel</h3>
+    <table>
+      <thead><tr><th>Foundation</th><th>Why it matters</th><th>Course</th></tr></thead>
+      <tbody>
+        <tr><td>Information theory</td><td>KL divergence, mutual information for understanding representations</td><td>Stanford STATS 311 (Duchi) · UIUC ECE 563</td></tr>
+        <tr><td>Linear algebra + SVD</td><td>SAEs decompose activations; singular value structure of weight matrices</td><td>Stanford EE 263 · CMU 10-606</td></tr>
+        <tr><td>Causal inference basics</td><td>Causal tracing is intervention-based; do-calculus formalizes "what if we ablate?"</td><td>Columbia COMS W4775 (Bareinboim)</td></tr>
+        <tr><td>Statistical learning theory</td><td>Generalization bounds explain what representations can/cannot encode</td><td>NYU CSCI-GA 2566 (Mohri) · Stanford CS 229M (Ma)</td></tr>
+        <tr><td>Dynamical systems</td><td>Teleodynamics frames representations as emergent attractors</td><td>UIUC ECE 528 (Nonlinear Systems)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Courses</h3>
+    <table>
+      <thead><tr><th>Course</th><th>University</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>CS 294-267 — Understanding LLMs: Foundations &amp; Safety</td><td>Berkeley (D. Song)</td><td>Core LLM safety + interpretability</td></tr>
+        <tr><td>COMS 6998 — Theoretical Foundations of LLMs</td><td>Columbia (D. Hsu)</td><td>Mathematical theory of what LLMs learn</td></tr>
+        <tr><td>CMSC 848R — Language Model Interpretability</td><td>UMD</td><td>Dedicated interp course</td></tr>
+        <tr><td>CSCI-GA 3033 — Building LLM Reasoners</td><td>NYU (G. Durrett)</td><td>FlashAttention, SFT, RL for reasoning</td></tr>
+        <tr><td>MT875 — Mechanistic Interpretability</td><td>Boston College (E. Grigsby)</td><td>Geometry of neural nets + circuits</td></tr>
+        <tr><td>LLM Interpretability Seminar</td><td>Tel Aviv (M. Geva)</td><td><a href="https://github.com/mega002/llm-interp-tau" target="_blank">github.com/mega002/llm-interp-tau</a></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Programs &amp; Communities</h3>
+    <table>
+      <thead><tr><th>Program</th><th>Format</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td><strong>MATS</strong> — ML Alignment Theory Scholars</td><td>12 weeks, Berkeley; mentors: Neel Nanda (DeepMind), ARC, MIRI, Anthropic researchers</td><td><a href="https://www.matsprogram.org/" target="_blank">matsprogram.org</a></td></tr>
+        <tr><td><strong>ARENA</strong> — Alignment Research Engineer Accelerator</td><td>5 weeks London (ARENA 8.0: May–Jun 2026); free 5-chapter curriculum online</td><td><a href="https://www.arena.education/" target="_blank">arena.education</a></td></tr>
+        <tr><td><strong>AI Safety Camp</strong></td><td>14 weeks, part-time online</td><td><a href="https://www.aisafety.camp/" target="_blank">aisafety.camp</a></td></tr>
+        <tr><td><strong>Redwood MLAB</strong></td><td>3 weeks intensive, Berkeley</td><td><a href="https://www.redwoodresearch.org/" target="_blank">redwoodresearch.org</a></td></tr>
+        <tr><td>Mech Interp Workshop @ NeurIPS 2025</td><td>Workshop</td><td><a href="https://mechinterpworkshop.com/" target="_blank">mechinterpworkshop.com</a></td></tr>
+        <tr><td>Mech Interp Workshop @ ICML 2024</td><td>Workshop (140+ submissions)</td><td><a href="https://icml2024mi.pages.dev/" target="_blank">icml2024mi.pages.dev</a></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Starting Papers</h3>
+    <table>
+      <thead><tr><th>Paper</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Elhage et al., "Toy Models of Superposition" (Anthropic 2022)</td><td>Foundation of how features are stored in neural networks</td></tr>
+        <tr><td>Conmy et al., "Towards Automated Circuit Discovery" (2023)</td><td>Algorithmic approach to finding circuits</td></tr>
+        <tr><td>Bricken et al., "Towards Monosemanticity" (Anthropic 2023)</td><td>SAEs applied to language models at scale</td></tr>
+        <tr><td>Templeton et al., "Scaling Monosemanticity" (Anthropic 2024)</td><td>Scaling SAE interpretability to Claude 3 Sonnet</td></tr>
+        <tr><td>Nanda &amp; Lieberum, "A Mechanistic Interpretability Analysis of GPT-2"</td><td>TransformerLens-based circuit analysis</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── 2. DIFFUSION & FLOWS ── -->
+  <div class="ref-section" id="diffusion">
+    <h2>2. Diffusion &amp; Flows</h2>
+    <p class="goal"><strong>Goal:</strong> Find new ideas and hypotheses; explore manifold and geometrical connections</p>
+
+    <h3>What to Study in Depth</h3>
+    <table>
+      <thead><tr><th>Topic</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Score-based generative models</td><td>Score matching, Langevin dynamics, denoising diffusion (DDPM, DDIM)</td></tr>
+        <tr><td>Continuous normalizing flows</td><td>Neural ODEs, flow matching, conditional flow matching</td></tr>
+        <tr><td>Riemannian diffusion</td><td>Diffusion processes on manifolds (spheres, hyperbolic spaces, SO(3))</td></tr>
+        <tr><td>Optimal transport</td><td>Wasserstein distances, Monge-Ampère, Schrödinger bridges</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Foundations to Learn in Parallel</h3>
+    <table>
+      <thead><tr><th>Foundation</th><th>Why it matters</th><th>Course</th></tr></thead>
+      <tbody>
+        <tr><td>Stochastic calculus &amp; SDEs</td><td>Diffusion = solving an SDE forward/backward; score function guides the reverse SDE</td><td>Columbia IEOR E6711/6712 · UIUC STAT 551/552</td></tr>
+        <tr><td>Differential geometry &amp; manifolds</td><td>Riemannian metrics, geodesics, curvature — needed for diffusion on non-Euclidean spaces</td><td>NYU CSCI-GA 3033 (Bruna) · UIUC ECE 557</td></tr>
+        <tr><td>Measure theory &amp; probability</td><td>Girsanov theorem, change of measure — core to understanding likelihood in diffusion models</td><td>Stanford STATS 310A/B</td></tr>
+        <tr><td>Optimal transport</td><td>Monge maps connect flows to transport; Wasserstein geometry is the right metric space</td><td>Columbia COMS 4995 (Blumberg)</td></tr>
+        <tr><td>ODE/PDE theory</td><td>Continuous normalizing flows solve ODEs; probability flow ODE connects score to sampling</td><td>Columbia COMS 4995 (Beigi)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Courses</h3>
+    <table>
+      <thead><tr><th>Course</th><th>University</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>CS 236 — Deep Generative Models</td><td>Stanford (Ermon/Grover)</td><td>Full family: VAEs → flows → diffusion → score-based</td></tr>
+        <tr><td>10-799 — Diffusion Models &amp; Flow Matching (Sp2026)</td><td>CMU</td><td>New dedicated course</td></tr>
+        <tr><td>ECE 598 — Generative Modeling w/ Diffusion &amp; Flow</td><td>UIUC</td><td>Dedicated offering</td></tr>
+        <tr><td>COMP760 — Geometry &amp; Generative Models</td><td>McGill/Mila (J. Bose)</td><td><strong>Only course</strong> covering Riemannian score-based models</td></tr>
+        <tr><td>CS 294-158 — Deep Unsupervised Learning</td><td>Berkeley (Abbeel)</td><td>Broad generative coverage</td></tr>
+        <tr><td>CSCI-GA 3033 — Mathematics of Deep Learning</td><td>NYU (Bruna)</td><td>Information geometry + optimal transport foundations</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Venues &amp; Communities</h3>
+    <table>
+      <thead><tr><th>Venue</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td><strong>GRaM Workshop</strong> — Geometry-grounded Representation &amp; Generation @ ICLR 2026 / ICML 2024</td><td><a href="https://gram-workshop.github.io/" target="_blank">gram-workshop.github.io</a></td></tr>
+        <tr><td>NeurReps Workshop @ NeurIPS</td><td>Symmetry, geometry, and neural representations</td></tr>
+        <tr><td>DiffGeo4DL Workshop</td><td>Differential geometry for deep learning</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Researchers &amp; Papers</h3>
+    <table>
+      <thead><tr><th>Researcher</th><th>Contribution</th></tr></thead>
+      <tbody>
+        <tr><td>Yang Song (OpenAI)</td><td>Score-based generative models through SDEs</td></tr>
+        <tr><td>Valentin De Bortoli (CNRS/ENS Paris)</td><td>Riemannian score-based generative modeling</td></tr>
+        <tr><td>Emile Mathieu (Cambridge)</td><td>Diffusion on manifolds (SO(3), hyperbolic)</td></tr>
+        <tr><td>Yaron Lipman (Meta/Weizmann)</td><td>Flow matching, conditional flow matching</td></tr>
+        <tr><td>David Duvenaud (Toronto)</td><td>Neural ODEs, continuous normalizing flows</td></tr>
+        <tr><td>Joey Bose (McGill/Mila)</td><td>Geometry and generative models</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── 3. CONTINUAL LEARNING ── -->
+  <div class="ref-section" id="cl">
+    <h2>3. Continual Learning</h2>
+    <p class="goal"><strong>Goal:</strong> Explore and progress; shape the idea around <strong>Causality + SSL → Continual Learning</strong></p>
+
+    <h3>What to Study in Depth</h3>
+    <table>
+      <thead><tr><th>Topic</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Catastrophic forgetting</td><td>EWC, SI, PackNet, progressive nets — why neural nets forget</td></tr>
+        <tr><td>Replay &amp; pseudo-rehearsal</td><td>Experience replay, generative replay (DER, LUMP)</td></tr>
+        <tr><td>SSL for CL</td><td>Self-supervised pre-training as a foundation for continual representation learning</td></tr>
+        <tr><td>Causal mechanisms for CL</td><td>Invariant causal mechanisms don't change across tasks → natural continual learning</td></tr>
+        <tr><td>Representation-level approaches</td><td>CRL hypothesis: if representations are causally-aligned, forgetting is reduced</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Foundations to Learn in Parallel</h3>
+    <table>
+      <thead><tr><th>Foundation</th><th>Why it matters</th><th>Course</th></tr></thead>
+      <tbody>
+        <tr><td>Representation learning theory</td><td>Understanding what makes a representation transferable vs. task-specific</td><td>NYU DS-GA 1008 (LeCun) · Stanford CS 330 (Finn)</td></tr>
+        <tr><td>Causal inference</td><td>Invariant causal prediction (ICP) provides the mechanism-stability principle</td><td>Columbia COMS W4775 (Bareinboim)</td></tr>
+        <tr><td>SSL theory</td><td>Contrastive learning, non-contrastive (BYOL, VICReg), JEPAs — what do they encode?</td><td>Berkeley CS 294-158 (Abbeel)</td></tr>
+        <tr><td>Bayesian methods</td><td>Bayesian online learning, sequential updating, posterior approximation for CL</td><td>Columbia STAT GU4224 · CMU 10-624</td></tr>
+        <tr><td>Information theory</td><td>Forgetting = information loss; mutual information bounds on representation quality</td><td>Stanford STATS 311 (Duchi)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Courses</h3>
+    <table>
+      <thead><tr><th>Course</th><th>University</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>COMS 6998 — Continual Learning &amp; Memory Models</td><td>Columbia (<strong>R. Zemel</strong>)</td><td><strong>Rare dedicated CL course</strong></td></tr>
+        <tr><td>DS-GA 3001 — Embodied Learning &amp; Vision</td><td>NYU (<strong>M. Ren</strong>)</td><td>CL in embodied/world-model context</td></tr>
+        <tr><td>CS 330 — Deep Multi-Task &amp; Meta Learning</td><td>Stanford (C. Finn)</td><td>CL within meta-learning framework</td></tr>
+        <tr><td>COMS W4775 — Causal Inference I</td><td>Columbia (Bareinboim)</td><td>Invariant mechanisms = CL foundations</td></tr>
+        <tr><td>DS-GA 1008 — Deep Learning (SSL section)</td><td>NYU (LeCun)</td><td>SSL/JEPA as CL-friendly representations</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Communities &amp; Venues</h3>
+    <table>
+      <thead><tr><th>Community</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td><strong>ContinualAI</strong> — monthly seminars, paper repo, Avalanche library</td><td><a href="https://www.continualai.org/" target="_blank">continualai.org</a></td></tr>
+        <tr><td><strong>Avalanche</strong> — end-to-end CL library (EWC, SI, GEM, A-GEM, LwF, iCaRL, DER)</td><td><a href="https://avalanche.continualai.org/" target="_blank">avalanche.continualai.org</a></td></tr>
+        <tr><td>ContinualAI Paper Repository</td><td><a href="https://github.com/ContinualAI/continual-learning-papers" target="_blank">github.com/ContinualAI/continual-learning-papers</a></td></tr>
+        <tr><td><strong>CLVision Workshop</strong> @ CVPR / ICCV (6th edition, ICCV 2025)</td><td><a href="https://sites.google.com/view/clvision2024" target="_blank">sites.google.com/view/clvision2024</a></td></tr>
+        <tr><td>CL Workshop @ NeurIPS (running since 2016)</td><td><a href="https://neurips.cc/" target="_blank">neurips.cc</a></td></tr>
+      </tbody>
+    </table>
+
+    <div class="hypothesis">
+      <h3>Hypothesis Thread: Causality + SSL → CL</h3>
+      <table>
+        <thead><tr><th>Step</th><th>What to explore</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>ICP (Invariant Causal Prediction, Peters et al. 2016) — mechanisms stable across environments = stable across time</td></tr>
+          <tr><td>2</td><td>SSL pre-training (VICReg, I-JEPA) learns representations that are more "mechanism-aligned" than supervised</td></tr>
+          <tr><td>3</td><td>CRL (Causal Representation Learning) — if latent factors are causally disentangled, new tasks only modify downstream modules</td></tr>
+          <tr><td>4</td><td><strong>Paper idea:</strong> Show that CRL + SSL representations suffer less catastrophic forgetting because they isolate invariant mechanisms</td></tr>
+          <tr><td>5</td><td>Test on standard CL benchmarks (Split-CIFAR, Split-ImageNet, CORe50) with SSL pre-training + causal regularization</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── 4. CAUSAL REPRESENTATION LEARNING ── -->
+  <div class="ref-section" id="crl">
+    <h2>4. Causal Representation Learning</h2>
+    <p class="goal"><strong>Goal:</strong> Explore and progress on CRL + Invariance + Foundation Models</p>
+
+    <h3>What to Study in Depth</h3>
+    <table>
+      <thead><tr><th>Topic</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Identifiability of causal variables</td><td>When can we recover latent causal factors from observations? (Locatello et al., Hyvarinen et al.)</td></tr>
+        <tr><td>Interventional CRL</td><td>Using interventions (do-calculus) to learn causal representations</td></tr>
+        <tr><td>Invariant Risk Minimization (IRM)</td><td>Arjovsky et al. 2019 — environments as proxy for interventions</td></tr>
+        <tr><td>Causal abstraction</td><td>Mapping between micro and macro causal models</td></tr>
+        <tr><td>CRL + Foundation Models</td><td>Do LLMs / VLMs learn causal structure? How to enforce it?</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Foundations to Learn in Parallel</h3>
+    <table>
+      <thead><tr><th>Foundation</th><th>Why it matters</th><th>Course</th></tr></thead>
+      <tbody>
+        <tr><td>Causal inference (Pearl)</td><td>do-calculus, identification, transportability — the formal language</td><td>Columbia COMS W4775 + 4995 (Bareinboim, 2-course sequence)</td></tr>
+        <tr><td>Nonlinear ICA</td><td>Identifiability theory (Hyvarinen) underpins most CRL results</td><td>Self-study: Hyvarinen et al. 2019</td></tr>
+        <tr><td>Representation learning theory</td><td>What makes representations disentangled? β-VAE, DCI metrics</td><td>NYU DS-GA 1008 (LeCun)</td></tr>
+        <tr><td>Group theory &amp; symmetries</td><td>Equivariant representations, group actions on latent spaces</td><td>NYU CSCI-GA 3033 (Bruna) · GDL Course (Bronstein)</td></tr>
+        <tr><td>Statistical learning theory</td><td>Sample complexity of causal discovery from finite interventions</td><td>NYU CSCI-GA 2566 (Mohri)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Courses</h3>
+    <table>
+      <thead><tr><th>Course</th><th>University</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>COMS W4775 — Causal Inference I</td><td>Columbia (<strong>Bareinboim</strong>)</td><td>Pearl's framework: d-sep, do-calculus, backdoor/frontdoor</td></tr>
+        <tr><td>COMS 4995 — Causal Inference II</td><td>Columbia (<strong>Bareinboim</strong>)</td><td>Transportability, causal RL, counterfactual reasoning, CRL</td></tr>
+        <tr><td>COMS 4995 — Causal Trustworthy AI</td><td>Columbia (<strong>Bareinboim</strong>)</td><td>Causal reasoning for fairness</td></tr>
+        <tr><td>DS-GA 3001 — Causal Inference in ML</td><td>NYU (H. He)</td><td>ML-oriented causal methods</td></tr>
+        <tr><td>CSCI-GA 3033 — Mathematics of Deep Learning</td><td>NYU (J. Bruna)</td><td>Group theory, symmetry, geometry for representations</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Resources</h3>
+    <table>
+      <thead><tr><th>Resource</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td>CausalAI Textbook (Bareinboim) — 3 modular tracks: Causal Decision-Making, Causal Generalization, Causal Generative Modeling</td><td><a href="https://causalai-book.net/" target="_blank">causalai-book.net</a></td></tr>
+        <tr><td>Bareinboim ICML Tutorial on Causal RL</td><td><a href="https://crl.causalai.net/" target="_blank">crl.causalai.net</a></td></tr>
+        <tr><td>C♥LM Workshop @ NeurIPS 2024 (Causality &amp; Large Models)</td><td><a href="https://calm-workshop-2024.github.io/about/" target="_blank">calm-workshop-2024.github.io</a></td></tr>
+        <tr><td>CRL Workshop @ NeurIPS 2023</td><td><a href="https://neurips.cc/" target="_blank">neurips.cc</a></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Researchers</h3>
+    <table>
+      <thead><tr><th>Researcher</th><th>Affiliation</th><th>Contribution</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Elias Bareinboim</strong></td><td>Columbia</td><td>Pearl's hierarchy, causal RL, CRL textbook</td></tr>
+        <tr><td><strong>Bernhard Schölkopf</strong></td><td>MPI Tübingen</td><td>Causal representation learning pioneer</td></tr>
+        <tr><td><strong>Yoshua Bengio</strong></td><td>Mila</td><td>Causal-neural connection, meta-transfer</td></tr>
+        <tr><td>Sara Magliacane</td><td>Amsterdam</td><td>Interventional CRL, domain adaptation</td></tr>
+        <tr><td>Caroline Uhler</td><td>MIT</td><td>Causal discovery, optimal transport</td></tr>
+        <tr><td>Aapo Hyvarinen</td><td>Helsinki</td><td>Nonlinear ICA, identifiability for CRL</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── 5. PORT-HAMILTONIAN ── -->
+  <div class="ref-section" id="ham">
+    <h2>5. Port-Hamiltonian System Dynamics</h2>
+    <p class="goal"><strong>Goal:</strong> How to turn Lyapunov stability into energy functions; connect to neural network training dynamics</p>
+
+    <h3>What to Study in Depth</h3>
+    <table>
+      <thead><tr><th>Topic</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Hamiltonian mechanics</td><td>Energy conservation, symplectic structure, phase space</td></tr>
+        <tr><td>Port-Hamiltonian systems</td><td>Energy-based modeling with dissipation and external ports</td></tr>
+        <tr><td>Lyapunov stability → energy functions</td><td>V(x) as a "learned energy landscape"; stability ↔ convergence of representations</td></tr>
+        <tr><td>Neural ODEs + Hamiltonian structure</td><td>Constrain neural ODE dynamics to preserve physical structure</td></tr>
+        <tr><td>PINNs</td><td>Physics-informed loss functions for incorporating known dynamics</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Foundations to Learn in Parallel</h3>
+    <table>
+      <thead><tr><th>Foundation</th><th>Why it matters</th><th>Course</th></tr></thead>
+      <tbody>
+        <tr><td>ODEs &amp; PDEs</td><td>Hamiltonian systems are ODEs; flow, fixed points, bifurcations</td><td>Columbia COMS 4995 (Beigi)</td></tr>
+        <tr><td>Nonlinear systems &amp; Lyapunov theory</td><td>Lyapunov functions ARE energy functions — stability = energy dissipation</td><td>UIUC ECE 528</td></tr>
+        <tr><td>Optimal control &amp; calculus of variations</td><td>Hamilton-Jacobi-Bellman connects optimal control to Hamiltonian mechanics</td><td>UIUC ECE 553</td></tr>
+        <tr><td>Riemannian geometry</td><td>Symplectic manifolds, Poisson brackets, geometric mechanics</td><td>UIUC ECE 557 (Geometric Control)</td></tr>
+        <tr><td>Energy-based models</td><td>LeCun's EBMs: energy function over configurations, inference = energy minimization</td><td>NYU DS-GA 1008 (LeCun)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Courses (compose from these)</h3>
+    <table>
+      <thead><tr><th>Course</th><th>University</th><th>What it covers</th></tr></thead>
+      <tbody>
+        <tr><td>ECE 528 — Analysis of Nonlinear Systems</td><td>UIUC</td><td><strong>Lyapunov stability</strong>, perturbation theory, input-to-state stability</td></tr>
+        <tr><td>ECE 553 — Optimum Control</td><td>UIUC</td><td>Calculus of variations, maximum principle, Hamilton-Jacobi-Bellman</td></tr>
+        <tr><td>ECE 557 — Geometric Control Theory</td><td>UIUC</td><td>Differential geometry, Lie groups, symplectic structure</td></tr>
+        <tr><td>6.8210 — Underactuated Robotics</td><td>MIT (Tedrake)</td><td>Lyapunov analysis, trajectory optimization, energy shaping</td></tr>
+        <tr><td>DS-GA 1008 — Deep Learning</td><td>NYU (LeCun)</td><td>Energy-based models as a unifying framework</td></tr>
+        <tr><td>CMSC 838B — Differentiable Programming</td><td>UMD (M. Lin)</td><td>Neural ODEs, differentiable physics simulations</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Papers &amp; Resources</h3>
+    <table>
+      <thead><tr><th>Paper / Resource</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Greydanus et al., "Hamiltonian Neural Networks" (NeurIPS 2019)</td><td>Foundational: learn Hamiltonian from data, conserve energy by construction</td></tr>
+        <tr><td>Cranmer et al., "Lagrangian Neural Networks" (2020)</td><td>Learn Lagrangian instead; more flexible coordinate choices</td></tr>
+        <tr><td>"Stochastic Port-Hamiltonian NNs" (arXiv 2025) — <a href="https://arxiv.org/html/2603.10078" target="_blank">arxiv.org/html/2603.10078</a></td><td>Universal approximation with passivity guarantees</td></tr>
+        <tr><td>Cueto, "Port-metriplectic neural networks" (Springer 2023)</td><td>Thermodynamics-informed ML</td></tr>
+        <tr><td>Berkenkamp et al., "Safe Model-based RL with Stability Guarantees" (NeurIPS 2017)</td><td>Lyapunov + RL</td></tr>
+        <tr><td>NeurIPS Workshop: ML &amp; Physical Sciences</td><td><a href="https://neurips.cc/virtual/2024/workshop/84717" target="_blank">neurips.cc/virtual/2024/workshop/84717</a></td></tr>
+      </tbody>
+    </table>
+
+    <div class="hypothesis">
+      <h3>Hypothesis Thread: Lyapunov stability → energy functions</h3>
+      <table>
+        <thead><tr><th>Step</th><th>Exploration</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>A Lyapunov function V(x) certifying stability IS an energy function — it decreases along trajectories</td></tr>
+          <tr><td>2</td><td>Port-Hamiltonian systems decompose dynamics into energy-storing + energy-dissipating + external port components</td></tr>
+          <tr><td>3</td><td><strong>Hypothesis:</strong> Can we learn a Port-Hamiltonian structure for the training dynamics of neural networks? i.e., loss = energy, parameters = state, gradients = forces</td></tr>
+          <tr><td>4</td><td>If training dynamics are Port-Hamiltonian, the "energy" (generalization-aware loss) must decrease — gives stability guarantees</td></tr>
+          <tr><td>5</td><td>Connection to EBMs: the learned energy landscape of an EBM can be constrained to satisfy Lyapunov conditions → guaranteed convergence of inference</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── 6. JEPA / MBRL / MPC ── -->
+  <div class="ref-section" id="jepa">
+    <h2>6. JEPAs, Model-Based RL &amp; Model Predictive Control</h2>
+    <p class="goal"><strong>Goal:</strong> Shape the idea; connect JEPAs as world models to MPC-style planning</p>
+
+    <h3>What to Study in Depth</h3>
+    <table>
+      <thead><tr><th>Topic</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>JEPA architecture</td><td>Joint Embedding Predictive Architecture — predict in latent space, not pixel space</td></tr>
+        <tr><td>World models for RL</td><td>Dreamer V1/V2/V3 (Hafner), IRIS, TD-MPC, MBPO</td></tr>
+        <tr><td>Model Predictive Control</td><td>Receding-horizon optimization over a learned dynamics model</td></tr>
+        <tr><td>Planning with learned models</td><td>CEM, MPPI, differentiable planning, latent-space planning</td></tr>
+        <tr><td>V-JEPA 2 as world model</td><td>LeCun's demonstration of V-JEPA for robotics (2025)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Foundations to Learn in Parallel</h3>
+    <table>
+      <thead><tr><th>Foundation</th><th>Why it matters</th><th>Course</th></tr></thead>
+      <tbody>
+        <tr><td>Optimal control &amp; MPC</td><td>The formal framework: cost function, dynamics constraint, receding horizon</td><td>UIUC ECE 553 · MIT 6.8210 (Tedrake)</td></tr>
+        <tr><td>State space models</td><td>JEPAs learn latent state transitions; SSMs formalize this</td><td>Annotated S4 · UIUC ECE 555</td></tr>
+        <tr><td>RL theory</td><td>MDPs, Bellman equations, model-based vs model-free tradeoffs</td><td>Berkeley CS 285 (Levine) · UIUC CS 542 (Jiang)</td></tr>
+        <tr><td>Energy-based models</td><td>JEPAs minimize an energy in latent space; EBMs are the general framework</td><td>NYU DS-GA 1008 (LeCun)</td></tr>
+        <tr><td>Dynamical systems</td><td>Fixed points, attractors, stability of learned dynamics</td><td>UIUC ECE 528</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Courses</h3>
+    <table>
+      <thead><tr><th>Course</th><th>University</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>CS 185/285 — Deep RL (Lectures 11–12: Model-Based RL)</td><td>Berkeley (<strong>S. Levine</strong>)</td><td>Premier model-based RL course; HW4 implements MBRL</td></tr>
+        <tr><td>CS 224R — Deep RL (robotics focus)</td><td>Stanford (<strong>C. Finn</strong>)</td><td>Offline RL, meta-RL, sim-to-real</td></tr>
+        <tr><td>10-703 — Deep RL &amp; Control</td><td>CMU (K. Fragkiadaki)</td><td>Model-based/free RL, visual RL, embodied agents</td></tr>
+        <tr><td>DS-GA 1008 — Deep Learning</td><td>NYU (<strong>Y. LeCun</strong>)</td><td>JEPAs, EBMs, SSL — the source</td></tr>
+        <tr><td>DS-GA 3001 — Embodied Learning &amp; Vision</td><td>NYU (<strong>M. Ren</strong>)</td><td>World models, 3D perception, CL for agents</td></tr>
+        <tr><td>6.8210 — Underactuated Robotics</td><td>MIT (Tedrake)</td><td>Trajectory optimization, MPC, Lyapunov analysis</td></tr>
+        <tr><td>ECE 553 — Optimum Control</td><td>UIUC</td><td>Calculus of variations, HJB, LQG, differential games</td></tr>
+        <tr><td>CS 542 — Statistical RL</td><td>UIUC (<strong>N. Jiang</strong>)</td><td>Rigorous finite-sample MBRL theory</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Papers &amp; Resources</h3>
+    <table>
+      <thead><tr><th>Paper</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>LeCun, "A Path Towards Autonomous Machine Intelligence" (2022) — <a href="https://openreview.net/pdf?id=BZ5a1r-kVsf" target="_blank">openreview.net</a></td><td>JEPA/H-JEPA proposal</td></tr>
+        <tr><td>Hafner et al., "DreamerV3" (2023)</td><td>State-of-the-art world model for model-based RL</td></tr>
+        <tr><td>Hansen et al., "TD-MPC2" (2024)</td><td>Temporal difference learning for MPC with learned models</td></tr>
+        <tr><td>Bardes et al., "V-JEPA" (Meta, 2024)</td><td>Video JEPA — prediction in latent space without reconstruction</td></tr>
+        <tr><td>Destrade et al., "JEPA-WM" (Dec 2025)</td><td>JEPA as world model — directly relevant to COLM target</td></tr>
+      </tbody>
+    </table>
+
+    <div class="hypothesis">
+      <h3>Hypothesis Thread: JEPA as world model + MPC</h3>
+      <table>
+        <thead><tr><th>Step</th><th>Exploration</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>JEPAs learn a latent dynamics model by predicting future latent states</td></tr>
+          <tr><td>2</td><td>MPC requires: (a) a dynamics model, (b) a cost function, (c) a planning horizon</td></tr>
+          <tr><td>3</td><td><strong>Key question:</strong> Can JEPA's latent space serve as the dynamics model for MPC, with the energy function as the cost?</td></tr>
+          <tr><td>4</td><td>Advantage over Dreamer: JEPA doesn't reconstruct observations → more abstract, compositional latent space</td></tr>
+          <tr><td>5</td><td>Challenge: MPC needs differentiable dynamics; JEPA's EMA target encoder creates a non-stationary target</td></tr>
+          <tr><td>6</td><td>Connection to H-JEPA: hierarchical planning = multi-timescale MPC in a hierarchical latent space</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── 7. SSMs ── -->
+  <div class="ref-section" id="ssm">
+    <h2>7. State Space Models &amp; Cognitive Modeling / Continual Learning</h2>
+    <p class="goal"><strong>Goal:</strong> Explore SSMs as cognitive architectures; connect to continual learning</p>
+
+    <h3>What to Study in Depth</h3>
+    <table>
+      <thead><tr><th>Topic</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>S4 / HiPPO / Mamba lineage</td><td>Linear recurrences, selective state spaces, hardware-efficient implementations</td></tr>
+        <tr><td>SSMs as memory systems</td><td>HiPPO = optimal online function approximation → natural memory mechanism</td></tr>
+        <tr><td>Mamba-2 / State Space Duality</td><td>Connection between SSMs and attention (SSD framework)</td></tr>
+        <tr><td>Cognitive modeling</td><td>SSMs as models of working memory, attention, and sequential decision-making</td></tr>
+        <tr><td>SSMs + Continual Learning</td><td>Can SSMs' recurrent state serve as a "memory" that doesn't catastrophically forget?</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Foundations to Learn in Parallel</h3>
+    <table>
+      <thead><tr><th>Foundation</th><th>Why it matters</th><th>Course</th></tr></thead>
+      <tbody>
+        <tr><td>Linear dynamical systems</td><td>SSMs ARE linear dynamical systems with learned parameters</td><td>Stanford EE 263 (Boyd)</td></tr>
+        <tr><td>Signal processing &amp; transforms</td><td>HiPPO uses Legendre/Laguerre polynomials; S4 uses FFT for parallelization</td><td>Columbia COMS 4995 (Beigi) · UIUC ECE 534</td></tr>
+        <tr><td>Control theory</td><td>Observability, controllability, Kalman filtering — core SSM concepts</td><td>UIUC ECE 515 · ECE 555</td></tr>
+        <tr><td>Approximation theory</td><td>HiPPO optimally approximates functions online — why?</td><td>Stanford STATS 310 · NYU CSCI-GA 2420</td></tr>
+        <tr><td>Stochastic processes</td><td>Hidden Markov models, filtering, prediction — classical SSMs</td><td>Columbia IEOR E6711 · UIUC ECE 534</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Learning Sequence (Paper Chain)</h3>
+    <table>
+      <thead><tr><th>Order</th><th>Paper</th><th>Year</th><th>Key idea</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>HiPPO: Recurrent Memory with Optimal Polynomial Projections</td><td>NeurIPS 2020</td><td>Online function approximation with orthogonal polynomials</td></tr>
+        <tr><td>2</td><td>LSSL: Combining Recurrent, Convolutional, and Continuous-Time Models</td><td>NeurIPS 2021</td><td>Linear state space layers</td></tr>
+        <tr><td>3</td><td>S4: Efficiently Modeling Long Sequences with Structured State Spaces</td><td>ICLR 2022</td><td>Diagonal + low-rank structure, FFT-based convolution</td></tr>
+        <tr><td>4</td><td>S4D: On the Parameterization and Initialization of Diagonal State Space Models</td><td>2022</td><td>Simplified diagonal version</td></tr>
+        <tr><td>5</td><td>Mamba: Linear-Time Sequence Modeling with Selective State Spaces</td><td>2023</td><td>Selection mechanism, hardware-aware scan</td></tr>
+        <tr><td>6</td><td>Mamba-2: State Space Duality (SSD) — <a href="https://goombalab.github.io/blog/2024/mamba2-part1-model/" target="_blank">goombalab.github.io</a></td><td>ICML 2024</td><td>Connection between SSMs and attention</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Resources</h3>
+    <table>
+      <thead><tr><th>Resource</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td><strong>The Annotated S4</strong> — canonical hands-on tutorial</td><td><a href="https://srush.github.io/annotated-s4/" target="_blank">srush.github.io/annotated-s4</a></td></tr>
+        <tr><td>Goomba Lab Blog (Albert Gu, CMU)</td><td><a href="https://goombalab.github.io/" target="_blank">goombalab.github.io</a></td></tr>
+        <tr><td>Visual Guide to Mamba &amp; SSMs</td><td><a href="https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state" target="_blank">newsletter.maartengrootendorst.com</a></td></tr>
+      </tbody>
+    </table>
+
+    <div class="hypothesis">
+      <h3>Hypothesis Thread: SSMs as cognitive memory for CL</h3>
+      <table>
+        <thead><tr><th>Step</th><th>Exploration</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>HiPPO's polynomial projection = optimal "compression" of history into finite state</td></tr>
+          <tr><td>2</td><td>This is naturally a continual learning mechanism: the state vector is a bounded-capacity memory</td></tr>
+          <tr><td>3</td><td>Unlike transformer KV-cache, SSM state integrates all history into a fixed-size vector</td></tr>
+          <tr><td>4</td><td><strong>Hypothesis:</strong> SSM-based architectures may be naturally more resistant to catastrophic forgetting because their recurrent state acts as compressed, incremental memory</td></tr>
+          <tr><td>5</td><td>Test: Compare Mamba vs. Transformer on continual learning benchmarks (task-incremental, class-incremental)</td></tr>
+          <tr><td>6</td><td>Connection to cognitive science: working memory capacity (~7±2 items) maps to SSM state dimension</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── 8. QUANT SOCIAL SCIENCE ── -->
+  <div class="ref-section" id="qss">
+    <h2>8. Quantitative Social Science / Econometrics / People Analytics</h2>
+    <p class="goal"><strong>Goal:</strong> Combine QMSS, data analytics, and advanced analytics into a strong quant-social research profile on top of MS DS</p>
+
+    <h3>What to Study in Depth</h3>
+    <table>
+      <thead><tr><th>Topic</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Causal inference for social science</td><td>Potential outcomes, IV, RDD, diff-in-diff, synthetic control</td></tr>
+        <tr><td>Econometric methods</td><td>Panel data, GMM, structural models, treatment effects</td></tr>
+        <tr><td>Text as data</td><td>NLP for social science: topic models, sentiment, framing, stance detection</td></tr>
+        <tr><td>People analytics</td><td>Organizational network analysis, attrition models, workforce optimization</td></tr>
+        <tr><td>Survey methodology + ML</td><td>Multilevel regression, poststratification (MRP), Bayesian survey adjustment</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Foundations to Learn in Parallel</h3>
+    <table>
+      <thead><tr><th>Foundation</th><th>Why it matters</th><th>Course</th></tr></thead>
+      <tbody>
+        <tr><td>Causal inference (both frameworks)</td><td>Rubin (potential outcomes) for experiments; Pearl (DAGs) for mechanism</td><td>Columbia COMS W4775 (Bareinboim) · Stanford STATS 209</td></tr>
+        <tr><td>Bayesian statistics</td><td>Hierarchical models, MRP, posterior predictive checks</td><td>Columbia STAT GU4224 · CMU 10-624</td></tr>
+        <tr><td>Time series &amp; panel data</td><td>Most social science data is panel; need fixed/random effects, dynamic models</td><td>Columbia STAT GU4221 (Davis)</td></tr>
+        <tr><td>Network analysis</td><td>Social networks, influence propagation, community detection</td><td>Stanford CS 224W (Leskovec)</td></tr>
+        <tr><td>NLP foundations</td><td>Text processing, embeddings, topic models for social science text data</td><td>Stanford CS 224N (Manning) · NYU DS-GA 1015</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Courses</h3>
+    <table>
+      <thead><tr><th>Course</th><th>University</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>MGTECON 634 — Causal Inference</td><td>Stanford (<strong>S. Athey / G. Imbens</strong>)</td><td>Gold standard for causal ML in economics</td></tr>
+        <tr><td>QMSS Program (full sequence)</td><td>Columbia</td><td>Quantitative methods for social science</td></tr>
+        <tr><td>STAT GR5235 — Applied Causal Inference</td><td>Columbia</td><td>Applied causal methods</td></tr>
+        <tr><td>DS-GA 1015 — Text as Data</td><td>NYU</td><td>NLP for social science</td></tr>
+        <tr><td>COMS W4775 — Causal Inference I</td><td>Columbia (Bareinboim)</td><td>Formal causal framework</td></tr>
+        <tr><td>STAT GU4221 — Time Series Analysis</td><td>Columbia (R. Davis)</td><td>Panel methods, forecasting</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Resources</h3>
+    <table>
+      <thead><tr><th>Resource</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td>Athey &amp; Imbens short course (free) — Causal ML for economics</td><td><a href="https://stanford.edu/" target="_blank">stanford.edu</a></td></tr>
+        <tr><td>Wharton People Analytics Conference</td><td><a href="https://whartonpeopleanalytics.com/" target="_blank">whartonpeopleanalytics.com</a></td></tr>
+        <tr><td>Angrist &amp; Pischke, "Mostly Harmless Econometrics"</td><td>Textbook — the econometrics bible</td></tr>
+        <tr><td>Cunningham, "Causal Inference: The Mixtape"</td><td>Free online — accessible causal methods</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Profile Integration: QMSS + DS + ML</h3>
+    <table>
+      <thead><tr><th>Component</th><th>What it adds</th></tr></thead>
+      <tbody>
+        <tr><td>MS DS (Columbia)</td><td>ML, deep learning, optimization, systems</td></tr>
+        <tr><td>QMSS perspective</td><td>Causal inference, survey methods, social theory, mixed methods</td></tr>
+        <tr><td>Advanced analytics (Mu Sigma background)</td><td>Decision science, behavioral economics, agent-based modeling</td></tr>
+        <tr><td><strong>Combined profile</strong></td><td>Quantitative social scientist who can: build ML models + design causal studies + understand human behavior + deploy at scale</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── CROSS-CUTTING ── -->
+  <div class="ref-section" id="cross">
+    <h2>Cross-Cutting Dependencies Map</h2>
+
+    <table class="cross-table">
+      <thead><tr><th>Foundation</th><th>Research Lines It Serves</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Causal inference (Bareinboim)</strong></td><td>Continual Learning · CRL · LLM Interp · Quant Social Science</td></tr>
+        <tr><td><strong>Information theory</strong></td><td>LLM Interp · Diffusion &amp; Flows · SSMs · Continual Learning</td></tr>
+        <tr><td><strong>Dynamical systems / ODEs</strong></td><td>Port-Hamiltonian · JEPAs + MBRL · SSMs · Control Theory</td></tr>
+        <tr><td><strong>Riemannian geometry / manifolds</strong></td><td>Diffusion &amp; Flows · CRL (symmetry) · Port-Hamiltonian (symplectic)</td></tr>
+        <tr><td><strong>Statistical learning theory</strong></td><td>LLM Interp · CRL · Continual Learning · SSMs</td></tr>
+        <tr><td><strong>Energy-based models (LeCun)</strong></td><td>JEPAs + MBRL · Port-Hamiltonian · Continual Learning · LLM Interp</td></tr>
+        <tr><td><strong>Optimal control / MPC</strong></td><td>JEPAs + MBRL · Port-Hamiltonian · SSMs</td></tr>
+        <tr><td><strong>Bayesian methods</strong></td><td>Continual Learning · Quant Social Science · CRL</td></tr>
+        <tr><td><strong>SSL theory</strong></td><td>Continual Learning · CRL · JEPAs</td></tr>
+      </tbody>
+    </table>
+
+    <div class="hypothesis" style="margin-top:1.5rem">
+      <h3>Highest-Leverage Foundations to Study First</h3>
+      <ol style="padding-left:1.2rem; font-family: var(--font-sans); font-size:0.87rem; line-height:1.8">
+        <li><strong>Causal inference (Bareinboim sequence)</strong> — serves 4 lines</li>
+        <li><strong>Dynamical systems + ODEs</strong> — serves 4 lines</li>
+        <li><strong>Information theory</strong> — serves 4 lines</li>
+        <li><strong>Energy-based models (LeCun)</strong> — serves 4 lines</li>
+      </ol>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  prachas-spring.github.io &mdash; Spring 2026
+</footer>
+
+</body>
+</html>
